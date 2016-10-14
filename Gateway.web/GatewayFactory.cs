@@ -11,7 +11,7 @@ namespace WebApplication1
 
         public override IServiceGateway GetServiceGateway(IRequest request)
         {
-            if (request.AbsoluteUri.Contains("widgets"))
+            if (request.AbsoluteUri.Contains("widget"))
                 return client;
             return base.GetServiceGateway(request);
         }

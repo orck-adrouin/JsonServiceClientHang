@@ -17,6 +17,12 @@ namespace Common
     {
     }
 
+    [Route("/widget/{Name}")]
+    public class GetWidgetRequest : IReturn<Widget>
+    {
+        public string Name { get; set; }
+    }
+
     public class WidgetsResponse
     {
         public Widget[] Items { get; set; }

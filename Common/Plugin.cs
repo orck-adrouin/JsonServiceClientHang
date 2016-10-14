@@ -19,6 +19,11 @@ namespace Common
 
     public class GatewayService : Service
     {
+        public Task<Widget> Any(GetWidgetRequest request)
+        {
+            return Gateway.SendAsync(request);
+        }
+
         public Task<WidgetsResponse> Any(GetWidgetsRequest request)
         {
             return Gateway.SendAsync(request);

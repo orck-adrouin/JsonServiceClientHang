@@ -8,6 +8,12 @@ namespace Backend.Web
 {
     public class ApplicationService : Service
     {
+        public async Task<Widget> Any(GetWidgetRequest request)
+        {
+            await Task.Delay(100);
+            return new Widget { Name = request.Name };
+        }
+
         public async Task<WidgetsResponse> Any(GetWidgetsRequest request)
         {
             await Task.Delay(100).ConfigureAwait(false);
